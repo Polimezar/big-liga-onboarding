@@ -1,0 +1,132 @@
+// анимация для loader
+
+@keyframes emersion-top {
+  0% {
+    transform: translateY(-100px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes emersion-left {
+  0% {
+    transform: translateX(-1000px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes emersion-right {
+  0% {
+    transform: translateX(1000px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes emersion-bottom {
+  0% {
+    transform: translateY(200px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(1);
+  }
+
+  20% {
+    transform: scale(0.99);
+  }
+
+  40% {
+    transform: scale(1);
+  }
+
+  60% {
+    transform: scale(1.01);
+  }
+
+  80% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(0.99);
+  }
+}
+
+// анимация для логотипа на главной
+@keyframes bounce {
+  50% {
+    transform: translateY(6px);
+  }
+
+  100% {
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes spin {
+  50% {
+    transform: rotate(-4deg);
+  }
+
+  100% {
+    transform: rotate(10deg);
+  }
+}
+
+.logo {
+  animation: emersion-top 2s ease-out 0.5s forwards;
+}
+
+.text {
+  animation: emersion-left 2s ease-out 0.5s forwards;
+}
+
+.text-group {
+  animation: emersion-right 2s ease-out 0.5s forwards;
+}
+
+// Анимация Динозавра
+.icon {
+  &__dino {
+    transform-origin: bottom;
+    animation: spin 2s ease-in-out alternate infinite;
+  }
+
+  &__zigzag {
+    animation: bounce 2s ease-in-out alternate infinite;
+  }
+
+  @include viewport--md {
+    &__flag {
+      fill: $color-default-white;
+    }
+
+    &__zigzag {
+      fill: $color-default-white;
+    }
+  }
+}

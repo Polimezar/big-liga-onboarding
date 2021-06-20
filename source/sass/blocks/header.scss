@@ -1,3 +1,14 @@
 .header {
   display: block;
+  position: fixed;
+
+  background-color: $color-default-white;
+
+  @include viewport--md {
+    height: 74px;
+  }
+}
+
+.header__wrapper {
+  padding: 25px 0;
 }
